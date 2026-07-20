@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Project</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<script>
+
+function googleTranslateElementInit() {
+
+new google.translate.TranslateElement(
+
+{
+
+pageLanguage:'en',
+
+includedLanguages:'en,te,hi,ta,kn,ml',
+
+layout:google.translate.TranslateElement.InlineLayout.SIMPLE
+
+},
+
+'google_translate_element'
+
+);
+
+}
+
+</script>
+
+<nav>
+
+    <div class="logo">
+        🌿 PlantAI
+    </div>
+
+    <ul>
+
+        <li><a href="/">Home</a></li>
+
+        <li><a href="/about">About</a></li>
+
+        <li><a href="/features">Features</a></li>
+
+        <li><a href="/prediction">Prediction</a></li>
+         </ul>
+
+        <div class="language-box">
+
+    <div id="google_translate_element"></div>
+
+</div>
+
+   
+
+</nav>
+
+
+<section class="about-page">
+
+    <div class="about-container">
+
+        <div class="about-image">
+
+            <img src="{{ url_for('static', filename='images/about.jpg') }}" alt="Plant">
+
+        </div>
+
+
+        <div class="about-content">
+
+            <h1>About AI Plant Disease Detector</h1>
+
+            <p>
+
+                AI Plant Disease Detector is an intelligent web application
+                developed to identify diseases in plant leaves using
+                Deep Learning techniques.
+
+            </p>
+
+            <p>
+
+                Farmers and agricultural students can upload a leaf image
+                and instantly detect whether the plant is healthy or affected
+                by disease.
+
+            </p>
+
+            <p>
+
+                The application is built using Python, Flask,
+                CNN (Convolutional Neural Network),
+                HTML, CSS and JavaScript.
+
+            </p>
+
+            <div class="buttons">
+
+                <a href="/" class="btn">
+                    ⬅ Home
+                </a>
+
+                <a href="/features" class="btn">
+                    Next ➜
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<script>
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+        pageLanguage: 'en'
+    }, 'google_translate_element');
+}
+</script>
+
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</body>
+
+</html>

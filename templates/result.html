@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Prediction Result</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- Navigation -->
+
+<nav>
+
+    <div class="logo">
+
+        🌿 PlantAI
+
+    </div>
+
+    <ul>
+
+        <li><a href="/">Home</a></li>
+
+        <li><a href="/about">About</a></li>
+
+        <li><a href="/features">Features</a></li>
+
+        <li><a href="/index">Prediction</a></li>
+
+    </ul>
+
+    <div class="language-box">
+
+    <div id="google_translate_element"></div>
+
+</div>
+
+</nav>
+
+
+<section class="result-page">
+
+<div class="result-card">
+
+<h1>🌿 Prediction Result</h1>
+
+<div class="result-container">
+
+<div class="image-section">
+
+<img src="{{ image_path }}" alt="Uploaded Leaf">
+
+</div>
+
+<div class="details-section">
+
+<h2>Prediction Details</h2>
+
+<div class="detail">
+
+<b>🌱 Crop Name</b>
+
+<p>{{ crop }}</p>
+
+</div>
+
+<div class="detail">
+
+<b>🦠 Disease Name</b>
+
+<p>{{ disease }}</p>
+
+</div>
+
+<div class="detail">
+
+<b>📊 Confidence</b>
+
+<p>{{ confidence }}%</p>
+
+</div>
+
+<div class="detail">
+
+<b>💊 Recommendation</b>
+
+<p>{{ recommendation }}</p>
+
+</div>
+
+<div class="buttons">
+
+<a href="/index" class="btn">
+
+🔄 Predict Another
+
+</a>
+
+<a href="/" class="btn home-btn">
+
+🏠 Home
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<script>
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+        pageLanguage: 'en'
+    }, 'google_translate_element');
+}
+</script>
+
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+
+</html>
