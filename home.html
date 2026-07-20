@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Plant Disease Detector</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- Navbar -->
+
+<nav>
+
+    <div class="logo">
+        🌿 PlantAI
+    </div>
+
+    <ul>
+
+        <li><a href="/">Home</a></li>
+
+        <li><a href="/about">About</a></li>
+
+        <li><a href="/features">Features</a></li>
+
+        <li><a href="/prediction">Prediction</a></li>
+
+    </ul>
+    <div class="language-box">
+
+    <div id="google_translate_element"></div>
+
+</div>
+
+</nav>
+
+
+<!-- Hero Section -->
+
+<section class="hero">
+
+    <div class="overlay">
+
+        <h1>AI Plant Disease Detector</h1>
+
+        <p>
+            Detect plant leaf diseases instantly using Artificial Intelligence
+            and Deep Learning.
+        </p>
+
+        <div class="buttons">
+
+            <a href="/about" class="btn">
+                Get Started
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Small Information -->
+
+<section class="info">
+
+    <div class="card">
+
+        <i class="fa-solid fa-seedling"></i>
+
+        <h2>Fast Detection</h2>
+
+        <p>
+            Upload a plant leaf image and get instant disease prediction.
+        </p>
+
+    </div>
+
+
+    <div class="card">
+
+        <i class="fa-solid fa-leaf"></i>
+
+        <h2>AI Powered</h2>
+
+        <p>
+            CNN-based Deep Learning model trained on PlantVillage dataset.
+        </p>
+
+    </div>
+
+
+    <div class="card">
+
+        <i class="fa-solid fa-shield-heart"></i>
+
+        <h2>Healthy Crops</h2>
+
+        <p>
+            Get disease information and recommendations to protect crops.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- Footer -->
+
+<footer>
+
+    <h3>AI Plant Disease Detector</h3>
+
+    <p>
+        Developed using Python, Flask, CNN and Deep Learning.
+    </p>
+
+</footer>
+<script>
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+        pageLanguage: 'en'
+    }, 'google_translate_element');
+}
+</script>
+
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</body>
+</html>
