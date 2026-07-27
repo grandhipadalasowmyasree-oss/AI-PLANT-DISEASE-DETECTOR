@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Plant Disease Dashboard</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav>
+
+    <div class="logo">
+        🌿 PlantAI
+    </div>
+
+    <ul>
+
+        <li><a href="/">Home</a></li>
+
+        <li><a href="/about">About</a></li>
+
+        <li><a href="/features">Features</a></li>
+
+        <li><a href="/index">Prediction</a></li>
+
+    </ul>
+
+    <div class="language-box">
+        <div id="google_translate_element"></div>
+    </div>
+
+</nav>
+
+<!-- ================= DASHBOARD ================= -->
+
+<section class="dashboard-page">
+
+<h1>🌿 AI Plant Disease Dashboard</h1>
+
+<div class="dashboard-container">
+
+<div class="dashboard-left">
+
+<img src="{{ image_path }}" class="dashboard-image">
+
+</div>
+
+<div class="dashboard-right">
+
+<div class="dashboard-box">
+
+<h2>🌱 Crop Name</h2>
+
+<p>{{ crop }}</p>
+
+</div>
+
+<div class="dashboard-box">
+
+<h2>🦠 Disease</h2>
+
+<p>{{ disease }}</p>
+
+</div>
+
+<div class="dashboard-box">
+
+<h2>📈 Confidence</h2>
+
+<p>{{ confidence }}%</p>
+
+</div>
+
+<div class="dashboard-box">
+
+<h2>💊 Recommendation</h2>
+
+<p>{{ recommendation }}</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Statistics -->
+
+<h1 class="heading2">
+
+<h1 class="heading2">📊 Prediction Statistics</h1>
+
+<div class="stats-container">
+
+    <div class="stat-card">
+        <h2>Total Predictions</h2>
+        <h1>62000</h1>
+    </div>
+
+    <div class="stat-card">
+        <h2>Healthy Plants</h2>
+        <h1>15000</h1>
+    </div>
+
+    <div class="stat-card">
+        <h2>Diseased Plants</h2>
+        <h1>47000</h1>
+    </div>
+
+    <div class="stat-card">
+        <h2>Accuracy</h2>
+        <h1>95%</h1>
+    </div>
+
+</div>
+
+<div class="stat-card">
+
+
+<!-- Prevention Tips -->
+
+<h1 class="heading2">
+
+🌱 Prevention Tips
+
+</h1>
+
+<div class="tips-container">
+
+<div class="tip-card">
+
+✔ Water plants regularly.
+
+</div>
+
+<div class="tip-card">
+
+✔ Remove infected leaves immediately.
+
+</div>
+
+<div class="tip-card">
+
+✔ Use disease-free seeds.
+
+</div>
+
+<div class="tip-card">
+
+✔ Avoid excess watering.
+
+</div>
+
+<div class="tip-card">
+
+✔ Apply recommended fungicides.
+
+</div>
+
+<div class="tip-card">
+
+✔ Monitor crops every week.
+
+</div>
+
+</div>
+
+<!-- Buttons -->
+
+<div class="dashboard-buttons">
+
+<a href="/" class="btn">
+
+🏠 Home
+
+</a>
+
+<a href="/index" class="btn">
+
+🔍 Predict Again
+
+</a>
+
+</div>
+
+</section>
+
+<!-- Google Translate -->
+
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<script>
+
+function googleTranslateElementInit(){
+
+new google.translate.TranslateElement(
+
+{
+
+pageLanguage:'en',
+
+includedLanguages:'en,te,hi,ta,kn,ml',
+
+layout:google.translate.TranslateElement.InlineLayout.SIMPLE
+
+},
+
+'google_translate_element'
+
+);
+
+}
+
+</script>
+
+</body>
+
+</html>

@@ -683,3 +683,80 @@ font-size:15px;
 cursor:pointer;
 
 }
+/* ================= DASHBOARD ================= */
+
+.dashboard-page{
+    min-height:100vh;
+    padding:120px 50px;
+    background:linear-gradient(rgba(0,80,30,.7),rgba(0,80,30,.7)),
+    url("../images/farm.jpg");
+    background-size:cover;
+}
+
+.dashboard-page h1{
+    text-align:center;
+    color:white;
+    margin-bottom:40px;
+    font-size:45px;
+}
+
+.dashboard-container{
+    display:flex;
+    justify-content:space-between;
+    gap:40px;
+    margin-bottom:50px;
+}
+
+.dashboard-left,
+.dashboard-right{
+    flex:1;
+}
+
+.dashboard-image{
+    width:100%;
+    max-width:450px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.4);
+}
+
+.dashboard-box{
+    background:white;
+    padding:20px;
+    margin-bottom:20px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+.dashboard-box h2{
+    color:#0b7a3c;
+}
+
+.dashboard-box p{
+    margin-top:10px;
+    font-size:18px;
+}
+
+.stats-container{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+    margin:40px 0;
+}
+
+.stat-card{
+    background:white;
+    border-radius:20px;
+    padding:30px;
+    text-align:center;
+    box-shadow:0 10px 20px rgba(0,0,0,.2);
+}
+
+.stat-card h2{
+    color:#0b7a3c;
+    margin-bottom:15px;
+}
+
+.stat-card h1{
+    font-size:42px;
+    color:#222;
+}

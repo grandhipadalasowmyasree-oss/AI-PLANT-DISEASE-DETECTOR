@@ -1,9 +1,10 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, session
 import os
 
 from model.predict import predict as model_predict
 
 app = Flask(__name__)
+app.secret_key = "plantai123"
 
 # Upload folder
 UPLOAD_FOLDER = "static/uploads"
@@ -80,15 +81,32 @@ def predict():
         disease,
         "Consult Agriculture Expert."
     )
-
+    session["crop"] = crop
+    session["disease"] = disease
+    session["confidence"] = confidence
+    session["recommendation"] = recommendation
+    session["image_path"] = filepath
     return render_template(
-        "result.html",
-        crop=crop,
-        disease=disease,
-        confidence=confidence,
-        recommendation=recommendation,
-        image_path=filepath
-    )
+    "dashboard.html",
+    crop=session.get("crop"),
+    disease=session.get("disease"),
+    confidence=session.get("confidence"),
+    recommendation=session.get("recommendation"),
+    image_path=session.get("image_path")
+)
+
+@app.route("/dashboard")
+def dashboard():
+
+   return render_template(
+    "dashboard.html",
+    crop=session.get("crop"),
+    disease=session.get("disease"),
+    confidence=session.get("confidence"),
+    recommendation=session.get("recommendation"),
+    image_path=session.get("image_path"),
+    total_predictions=session.get("total_predictions")
+)
 
 
 if __name__ == "__main__":
