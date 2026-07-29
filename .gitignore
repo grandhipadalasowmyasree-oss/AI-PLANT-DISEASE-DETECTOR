@@ -6,3 +6,4 @@ val/
 templates/dataset/
 __pycache__/
 *.pyc
+static/uploads/
