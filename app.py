@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request
 import os
 
-from model.predict import predict as model_predict
+from predict import predict as model_predict
 
 app = Flask(__name__)
 
