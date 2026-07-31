@@ -2,7 +2,7 @@ import torch
 from torchvision import transforms
 from PIL import Image
 
-from model.cnn_model import PlantDiseaseCNN
+from cnn_model import PlantDiseaseCNN
 
 transform = transforms.Compose([
     transforms.Resize((224, 224)),
