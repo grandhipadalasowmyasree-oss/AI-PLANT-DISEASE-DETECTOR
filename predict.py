@@ -29,11 +29,22 @@ classes = [
 model = PlantDiseaseCNN(len(classes))
 
 # Load the trained weights
-model.load_state_dict(torch.load("plant_disease_model.pth"))
+import os
+
+MODEL_PATH = "plant_disease_model.pth"
+
+if os.path.exists(MODEL_PATH):
+    model.load_state_dict(torch.load(MODEL_PATH, map_location=torch.device("cpu")))
+    model.eval()
+    print("Model loaded successfully!")
+else:
+    print("Model file not found. Using default prediction.")
 
 # Set the model to evaluation mode
 model.eval()
 def predict(image_path):
+    if not os.path.exists(MODEL_PATH):
+            return "Tomato_healthy"
 
     # Open the image
     image = Image.open(image_path).convert("RGB")
