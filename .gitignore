@@ -1,10 +1,6 @@
-venv/S
-dataset/
-train/
-test/
-val/
-templates/dataset/
+venv/
 __pycache__/
 *.pyc
-static/uploads/
+uploads/
+dataset/
 *.pth
